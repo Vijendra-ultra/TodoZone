@@ -1,9 +1,9 @@
 import { todos } from "../types";
 type TodoProps = {
   todo: todos;
-  onClick: () => void;
+  handleComplete: (todoId: number) => void;
 };
-const Todo: React.FC<TodoProps> = ({ todo, onClick }) => {
+const Todo: React.FC<TodoProps> = ({ todo, handleComplete }) => {
   return (
     <>
       {!todo.completed && (
@@ -11,7 +11,7 @@ const Todo: React.FC<TodoProps> = ({ todo, onClick }) => {
           <span className="pl-2">{todo.todo_text}</span>
           <button
             className="ml-auto text-2xl text-gray-900 pr-3"
-            onClick={() => onClick()}
+            onClick={() => handleComplete(todo.id)}
           >
             X
           </button>

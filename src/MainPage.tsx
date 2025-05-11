@@ -102,7 +102,7 @@ const MainPage: React.FC<MainPageProp> = ({ user }) => {
             </button>
           </div>
           <TodosCount todosArr={todos} />
-          <TodoDisplayer todosList={todos} onClick={handleComplete} />
+          <TodoDisplayer todosList={todos} handleComplete={handleComplete} />
         </div>
       )}
     </>

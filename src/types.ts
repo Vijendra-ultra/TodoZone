@@ -9,6 +9,6 @@ export type userLoginProp={
   setEmail:React.Dispatch<React.SetStateAction<string>>,
   password:string,
   setPassword:React.Dispatch<React.SetStateAction<string>>,
-  handleLogin:()=>void;
+  handleLogin:(e:React.FormEvent<HTMLFormElement>)=>void;
 
 }
