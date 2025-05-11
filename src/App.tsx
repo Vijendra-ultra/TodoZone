@@ -14,7 +14,7 @@ const App: React.FC = () => {
   const [user, setUser] = useState<User | null>(null);
   const navigateToPage = useNavigate();
 
-  async function handleLogin(e: React.FormEventHandler<HTMLFormElement>) {
+  async function handleLogin(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const { data, error } = await supabase.auth.signUp({
       email: email,
